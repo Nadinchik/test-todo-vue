@@ -15,7 +15,7 @@
                 >X</button>
             </div>
             <div class="card__item-body flex-center">
-                <div v-if="!item.isEditable" style="display: flex">{{item.title}}</div>
+                <div v-if="!item.isEditable" style="display: flex; word-break: break-word">{{item.title}}</div>
                 <div v-else class="card__input-edit">
                     <input type="text" name="title" id="title" v-model="title">
                     <button

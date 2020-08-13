@@ -13,6 +13,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        border-bottom: 1px solid #9d9d9d;
         &-container {
             width: 40%;
             display: flex;
@@ -20,6 +21,7 @@
     }
     &__list {
         width: 100%;
+        margin-top: 25px;
     }
     &__input-edit {
         width: 100%;
@@ -62,17 +64,17 @@
             width: 15%;
             height: 32px;
             color: #fff;
-            background-color: #188fff;
+            background-color: #1D9DAA;
             border-radius: 5px;
-            border-color: #188fff;
+            border-color: #1D9DAA;
         }
         &-delete {
-            background-color: #ff1921;
-            border-color: #ff1921;
+            background-color: #C4051B;
+            border-color: #C4051B;
         }
         &-edit {
-            background-color: #188fff;
-            border-color: #188fff;
+            background-color: #1D9DAA;
+            border-color: #1D9DAA;
         }
         .active {
             background-color: #fff;
@@ -89,13 +91,13 @@
             border-radius: 15px;
         }
         &-red {
-            background-color: #ff1921;
+            background-color: #C4051B;
         }
         &-orange {
             background-color: #ff8c19;
         }
         &-green {
-            background-color: #15bf13;
+            background-color: #019629;
         }
     }
 }
