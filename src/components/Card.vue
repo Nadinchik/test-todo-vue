@@ -7,7 +7,7 @@
                     :class="{'active': item.isEditable}"
                     @click="editTask({id: item.id, isEdit: !item.isEditable})"
                 >
-                    <img src="../assets/edit.png" width="12" height="12">
+                    <img src="../assets/edit.png" width="10" height="10">
                 </button>
                 <button
                     class="card__buttons-delete"
@@ -17,7 +17,7 @@
             <div class="card__item-body flex-center">
                 <div v-if="!item.isEditable" style="display: flex; word-break: break-word">{{item.title}}</div>
                 <div v-else class="card__input-edit">
-                    <input type="text" name="title" id="title" v-model="title">
+                    <input type="text" name="title" id="title" v-model="item.title">
                     <button
                         class="card__buttons-set"
                         @click="acceptChanges"
@@ -38,11 +38,6 @@ import { mapActions } from "vuex";
 export default {
     name: "card",
     components: { Slider },
-    data() {
-        return {
-            title: ''
-        }
-    },
     props: {
         item: {
             type: Object
@@ -52,10 +47,9 @@ export default {
         ...mapActions(["deleteTask", "updateTask", "updateTitle"]),
         editTask({id, isEdit}) {
             this.updateTask({id, isEdit});
-            this.title = '';
         },
         acceptChanges() {
-            this.updateTitle({id: this.item.id, title: this.title.trim()});
+            this.updateTitle({id: this.item.id, title: this.item.title.trim()});
             this.updateTask({id: this.item.id, isEdit: false});
         }
     }

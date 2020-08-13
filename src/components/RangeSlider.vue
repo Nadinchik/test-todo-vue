@@ -1,14 +1,16 @@
 <template>
-    <div class="slidecontainer">
-        <input
-            id="myRange"
-            type="range"
-            min="1"
-            max="100"
-            :value="card.sliderValue"
-            class="slider"
-            @change="updateValue"
-        >
+    <div class="slider">
+        <div class="slider__body">
+            <input
+                id="myRange"
+                type="range"
+                min="1"
+                max="100"
+                :value="card.sliderValue"
+                class="slider"
+                @change="updateValue"
+            >
+        </div>
         <div class="card__score">
             <div :class="`card__score-${card.status}`"></div>
         </div>

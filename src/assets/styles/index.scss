@@ -2,6 +2,10 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
+    h1 {
+        text-transform: uppercase;
+        font-family: Geneva, Arial, Helvetica, sans-serif;
+    }
 }
 .flex-center {
     display: flex;
@@ -17,6 +21,11 @@
         &-container {
             width: 40%;
             display: flex;
+            padding: 0 0 0 2px;
+            align-items: center;
+            border: 1px solid #9d9d9d;
+            border-radius: 7px;
+            margin-bottom: 20px;
         }
     }
     &__list {
@@ -38,7 +47,7 @@
             width: 38%;
             min-height: 150px;
             margin-bottom: 15px;
-            padding: 15px;
+            padding: 15px 15px 0;
             border: 1px solid #9d9d9d;
             border-radius: 10px;
             -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
@@ -59,22 +68,31 @@
         justify-content: flex-end;
         button {
             border-width: thin;
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            font-size: 9px;
+            padding: 0;
+            border: 1px solid #9e9e9e;
         }
         &-add {
             width: 15%;
-            height: 32px;
+            height: 31px;
             color: #fff;
             background-color: #1D9DAA;
             border-radius: 5px;
             border-color: #1D9DAA;
+            border: 1px solid #1D9DAA;
         }
         &-delete {
-            background-color: #C4051B;
-            border-color: #C4051B;
+            background-color: #9e9e9e;
+            border-color: #9e9e9e;
         }
         &-edit {
             background-color: #1D9DAA;
             border-color: #1D9DAA;
+            border-color: #1D9DAA;
+            border: 1px solid #1D9DAA !important;
         }
         .active {
             background-color: #fff;
@@ -85,10 +103,12 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        height: 30px;
+        margin: -10px -15px 0;
         div {
-            width: 30px;
+            width: 100%;
             height: 30px;
-            border-radius: 15px;
+            border-radius: 0 0 10px 10px;
         }
         &-red {
             background-color: #C4051B;
@@ -104,14 +124,19 @@
 input#newitem {
     width: 85%;
     height: 25px;
-    margin-bottom: 20px;
+    border: none;
 }
 input#title {
     width: 80%;
     height: 25px;
 }
-.slidecontainer {
-    width: 70%
+.slider {
+    width: 100%;
+    min-height: 100%;
+    &__body {
+        padding: 20px;
+        padding-bottom: 30px;
+    }
 }
 input[type="range"] {
     width: 100%;
